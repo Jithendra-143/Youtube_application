@@ -4,6 +4,12 @@
     <test name = "Test Cases for Buildout">
        <classes>          
             <class name="demo.TestCases"></class>
+                <methods>
+                    <!-- <include name="testCase01"/>
+                    <include name="testCase02"/> -->
+                    <!-- <include name="testCase03"/> -->
+                    <include name="testCase05"/>
+                </methods>
         </classes>
     </test>
 </suite>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-06T15:05:14Z" name="Test Suite for Buildout" finished-at="2025-03-06T15:06:27Z" duration-ms="72644">
+    <groups>
+    </groups>
+    <test started-at="2025-03-06T15:05:14Z" name="Test Cases for Buildout" finished-at="2025-03-06T15:06:27Z" duration-ms="72644">
+      <class name="demo.TestCases">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:35:14Z" name="startBrowser" finished-at="2025-03-06T20:35:21Z" duration-ms="6348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method is-config="true" signature="driverGet()[pri:0, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:35:21Z" name="driverGet" finished-at="2025-03-06T20:35:25Z" duration-ms="4472" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverGet -->
+        <test-method signature="testCase01()[pri:1, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:35:25Z" name="testCase01" finished-at="2025-03-06T20:35:28Z" duration-ms="3105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase01 -->
+        <test-method is-config="true" signature="driverGet()[pri:0, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:35:28Z" name="driverGet" finished-at="2025-03-06T20:35:32Z" duration-ms="3716" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverGet -->
+        <test-method signature="testCase02()[pri:2, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:35:32Z" name="testCase02" finished-at="2025-03-06T20:35:34Z" duration-ms="2557" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase02 -->
+        <test-method is-config="true" signature="driverGet()[pri:0, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:35:34Z" name="driverGet" finished-at="2025-03-06T20:35:36Z" duration-ms="1625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverGet -->
+        <test-method signature="testCase03()[pri:3, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:35:36Z" name="testCase03" finished-at="2025-03-06T20:35:40Z" duration-ms="3870" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase03 -->
+        <test-method is-config="true" signature="driverGet()[pri:0, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:35:40Z" name="driverGet" finished-at="2025-03-06T20:35:42Z" duration-ms="1755" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverGet -->
+        <test-method signature="testCase04()[pri:4, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:35:42Z" name="testCase04" finished-at="2025-03-06T20:35:52Z" duration-ms="10479" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase04 -->
+        <test-method is-config="true" signature="driverGet()[pri:0, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:35:53Z" name="driverGet" finished-at="2025-03-06T20:35:55Z" duration-ms="1879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverGet -->
+        <test-method signature="TestCase05(java.lang.String)[pri:5, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:35:55Z" name="TestCase05" description="Verify video views count" data-provider="excelData" finished-at="2025-03-06T20:36:10Z" duration-ms="14742" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Movies]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase05 -->
+        <test-method is-config="true" signature="driverGet()[pri:0, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:36:10Z" name="driverGet" finished-at="2025-03-06T20:36:12Z" duration-ms="1988" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverGet -->
+        <test-method signature="TestCase05(java.lang.String)[pri:5, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:36:12Z" name="TestCase05" description="Verify video views count" data-provider="excelData" finished-at="2025-03-06T20:36:18Z" duration-ms="6547" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Music]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase05 -->
+        <test-method is-config="true" signature="driverGet()[pri:0, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:36:18Z" name="driverGet" finished-at="2025-03-06T20:36:20Z" duration-ms="1625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverGet -->
+        <test-method signature="TestCase05(java.lang.String)[pri:5, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:36:20Z" name="TestCase05" description="Verify video views count" data-provider="excelData" finished-at="2025-03-06T20:36:26Z" duration-ms="5849" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Games]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase05 -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:demo.TestCases@463b4ac8]" started-at="2025-03-06T20:36:26Z" name="endTest" finished-at="2025-03-06T20:36:27Z" duration-ms="1041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- demo.TestCases -->
+    </test> <!-- Test Cases for Buildout -->
+  </suite> <!-- Test Suite for Buildout -->
+</testng-results>

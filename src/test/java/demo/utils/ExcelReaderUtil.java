@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ExcelReaderUtil {
 
-    public static Object[][] readExcelData(String fileName) {
+    public static Object[][] readExcelData(String fileName, String worksheetName, int columnIndex) {
         try {
             System.out.println("Reading data");
             InputStream file = new DataInputStream(new FileInputStream(fileName));
