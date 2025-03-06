@@ -180,11 +180,11 @@ public class TestCases  { // Lets us read the data "extends ExcelDataProvider"
         }
 
         @Test(priority = 5, enabled = true, description = "Verify video views count", dataProvider = "excelData", dataProviderClass = ExcelDataProvider.class)
-        public void TestCase05(String searchTerms) {
+        public void TestCase05(String excelData) {
                 System.out.println("Testcase05 started");
                 // Search for the item
                 By searchBox = By.xpath("//div[@id='center']//div/form/input");
-                Wrappers.sendKeysAW(driver, searchBox, searchTerms);
+                Wrappers.sendKeysAW(driver, searchBox, excelData);
 
                 // Scroll through the search results until the total views for the videos reach
                 // 10 crore
