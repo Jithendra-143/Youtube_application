@@ -48,9 +48,7 @@ public class Wrappers {
     }
     public static void clickAW(WebDriver driver, By locator) {
         try {
-         //   YouTubeUtils.logStatus("clickAW", "Clicking");
-
-            // Setting up WebDriverWait with a timeout of 20 seconds
+          
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
             // Waiting for the element to be visible
@@ -62,7 +60,7 @@ public class Wrappers {
             // Clicking the element
             element.click();
         } catch (Exception e) {
-          // YouTubeUtils.logStatus("clickAW", "Exception while clicking\n" + e.getMessage());
+         
           System.out.println(e.getMessage());
         }
     }
@@ -70,13 +68,12 @@ public class Wrappers {
       public static List<WebElement> getElements(WebDriver driver, By firstNNewsLocator) {
         List<WebElement> elements = new ArrayList<>();
         try {
-          //  logStatus("getElements", "Getting elements");
+           
 
             // Find all elements matching the locator
             elements = driver.findElements(firstNNewsLocator);
         } catch (Exception e) {
-           // logStatus("getElements", "Exception\n\t\t\t" + e.getMessage());
-           System.out.println(e.getMessage());
+            System.out.println(e.getMessage());
         }
         return elements;
     }
@@ -84,7 +81,7 @@ public class Wrappers {
     public static void getBodyAndViewCount(WebDriver driver, By firstNNewsLocator) {
         int totalLikes = 0;
         try {
-           // logStatus("getBodyAndViewCount", "Getting body and view count");
+         
 
             // Wait for the first news post to become visible
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

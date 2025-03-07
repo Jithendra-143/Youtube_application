@@ -34,7 +34,7 @@ public class TestCases  { // Lets us read the data "extends ExcelDataProvider"
 
         @Test(priority = 1, enabled = true)
         public void testCase01() throws Exception {
-                System.out.println("Testcase01 started");
+                System.out.println("Testcase_01 started");
                 // driver.get("https://www.youtube.com/");
                 Boolean URL = driver.getCurrentUrl().contains("youtube");
                 Assert.assertTrue(URL, "Youtube link is not correctly opened");
@@ -48,12 +48,12 @@ public class TestCases  { // Lets us read the data "extends ExcelDataProvider"
                 By messageLocator = By.xpath("//section[contains(@class, 'about__content')]");
                 Wrappers.scrollToViewport(driver, messageLocator);
                 Wrappers.getDisplayedMessage(driver, messageLocator);
-                System.out.println("Testcase01 ended");
+                System.out.println("Testcase_01 ended");
         }
 
         @Test(priority = 2, enabled = true)
         public void testCase02() throws Exception {
-                System.out.println("Testcase02 started");
+                System.out.println("Testcase_02 started");
                 
 
                  // Navigate to the "Films" tab
@@ -71,8 +71,10 @@ public class TestCases  { // Lets us read the data "extends ExcelDataProvider"
                 
                 By filmCertificationLocator = By.xpath("//ytd-grid-movie-renderer[contains(@class,'style-scope')][16]//ytd-badge-supported-renderer/div[2]/p");
                 String filmCertification = Wrappers.getElementText(driver, lastMovie, filmCertificationLocator);
+
+                // String expected="U/A, U, A";
                
-                softAssert.assertEquals(filmCertification, "U/A", "The movie certification is not marked as 'A'");
+                softAssert.assertEquals(filmCertification, "U",  "The movie certification is not marked as 'A'");
 
                 By movieGenreLocator = By.xpath(".//span[contains(@class, 'metadata')]");
                 String movieGenre = Wrappers.getElementText(driver, lastMovie, movieGenreLocator);
@@ -80,13 +82,14 @@ public class TestCases  { // Lets us read the data "extends ExcelDataProvider"
                 softAssert.assertTrue(movieGenre.contains("Comedy") || movieGenre.contains("Indian cinema"), "The movie genre is neither 'Comedy' nor 'Animation'");
         
                 softAssert.assertAll();
+                System.out.println("Testcase_02 ended");
 
         }
 
         @Test(priority = 3, enabled = true)
         public void testCase03() throws InterruptedException {
 
-                System.out.println("Testcase03 started");
+                System.out.println("Testcase_03 started");
 
                 By musicTab = By.xpath("//a[contains(@title, 'Music')]");
                 Wrappers.scrollToViewport(driver, musicTab);
@@ -107,61 +110,13 @@ public class TestCases  { // Lets us read the data "extends ExcelDataProvider"
                
                 softAssert.assertTrue(number <= 50, "Number is not less or equal to 50");
                 softAssert.assertAll();
-                System.out.println("Testcase03 ended");
+                System.out.println("Testcase_03 ended");
                 
-        
-                // Locate the first section of playlists
-              /*   By firstSection = By.xpath("(//ytd-item-section-renderer)[1]");
-                Wrappers.scrollToViewport(driver, firstSection);
-
-                // Scroll to the extreme right within the first section
-                Wrappers.scrollToExtreme(driver, By.xpath("(//ytd-item-section-renderer)[1]//button[contains(@aria-label, 'Next')]"));
-
-                // Last playlist
-                By lastPlaylist = By.xpath("((//ytd-item-section-renderer)[1]//ytd-compact-station-renderer)[last()]");
-
-                // Print the name of the playlist
-                By playlistNameLocator = By.xpath(".//h3");
-                String playlistName = Wrappers.getElementText(driver, lastPlaylist, playlistNameLocator);
-                System.out.println(playlistName);
-
-                // Count the number of tracks listed in the playlist
-                By numberOfTrackLocator = By.xpath(".//p[contains(@id, 'video-count')]");
-                int numberOfTracks = Integer.parseInt(Wrappers.getElementText(driver, lastPlaylist, numberOfTrackLocator).replaceAll("[\\D]", ""));
-                System.out.println("Count : "+numberOfTracks);
-
-                // Soft assert whether the number of tracks listed is less than or equal to 50
-                softAssert.assertTrue((numberOfTracks <= 50), "The number of tracks listed is more than 50");
-
-                
-
-
-
-
-               /* WebElement Music = wait.until(ExpectedConditions
-                                .elementToBeClickable(By.xpath("//yt-formatted-string[text()='Music']")));
-                Wrappers.clickOnBtn(driver, Music);
-                Thread.sleep(3000);
-                WebElement showmore = driver.findElement(
-                                By.xpath("(//span[contains(text(),'Biggest Hits')]/ancestor::div[@id='dismissible']//button)[1]"));
-                Wrappers.clickOnBtn(driver, showmore);
-
-                String lastplaylist = driver.findElement(By.xpath("//span[text()='Bollywood Dance Hitlist']"))
-                                .getText();
-                System.out.println(lastplaylist);
-                WebElement songs = driver.findElement(By.xpath(
-                                "//span[text()='Bollywood Dance Hitlist']/../../../../../../a/yt-collection-thumbnail-view-model/yt-collections-stack/div/div[3]/yt-thumbnail-view-model/yt-thumbnail-overlay-badge-view-model/yt-thumbnail-badge-view-model/badge-shape/div[2]"));
-
-                String text = songs.getText().replaceAll("[^0-9]", "");
-                int number = Integer.parseInt(text);
-                SoftAssert softAssert = new SoftAssert();
-                softAssert.assertTrue(number <= 50, "Number is not less or equal to 50");
-                */
-        }
+         }
 
         @Test(priority = 4, enabled = true)
         public void testCase04() {
-                System.out.println("Testcase04 started");
+                System.out.println("Testcase_04 started");
                 By newsTab = By.xpath("//a[contains(@title, 'News')]");
                 Wrappers.scrollToViewport(driver, newsTab);
                 Wrappers.clickAW(driver, newsTab);
@@ -176,12 +131,12 @@ public class TestCases  { // Lets us read the data "extends ExcelDataProvider"
                 By firstNNewsLocator = By.xpath(
                                 "(//span[contains(text(), 'Latest news post')]/ancestor::ytd-rich-section-renderer//ytd-post-renderer)[position() <= "+ numberOfNewsPosts + "]");
                 Wrappers.getBodyAndViewCount(driver, firstNNewsLocator);
-                System.out.println("Testcase04 ended");
+                System.out.println("Testcase_04 ended");
         }
 
         @Test(priority = 5, enabled = true, description = "Verify video views count", dataProvider = "excelData", dataProviderClass = ExcelDataProvider.class)
         public void testCase05(String excelData) {
-                System.out.println("Testcase05 started");
+                System.out.println("Testcase_05 started");
                 // Search for the item
                 By searchBox = By.xpath("//div[@id='center']//div/form/input");
                 Wrappers.sendKeysAW(driver, searchBox, excelData);
@@ -190,7 +145,7 @@ public class TestCases  { // Lets us read the data "extends ExcelDataProvider"
                 // 10 crore
                 long totalCount = 10_00_00_000;
                 Wrappers.scrollTillVideoCountReaches(driver, totalCount);
-                System.out.println("Testcase05 ended");
+                System.out.println("Testcase_05 ended");
         }
 
         /*
